@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">MyGoings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="important_item">Important goings</string>
+    <string name="active_item">Active goings</string>
+    <string name="past_item">Past goings</string>
+    <string name="manage_item">Managing</string>
+
+    <string name="toggle_open">Open</string>
+    <string name="toggle_close">Close</string>
+
+    <string name="today_tab">Today</string>
+    <string name="tomorrow_tab">Tomorrow</string>
+    <string name="important_tab">Important</string>
+    <string name="allActive_tab">All active</string>
+
+    <string name="done_tab">Done</string>
+    <string name="expired_tab">Expired</string>
+    <string name="skipped_tab">Skipped</string>
+    <string name="allPast_tab">All past</string>
+
+    <string name="manageGoings_tab">Manage goings</string>
+    <string name="manageNotifications_tab">Manage notifications</string>
+
+</resources>

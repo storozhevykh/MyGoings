@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/important_item"
+        android:title="@string/important_item"
+        android:icon="@drawable/icon_important"/>
+    <item
+        android:id="@+id/active_item"
+        android:title="@string/active_item"
+        android:icon="@drawable/icon_active"/>
+    <item
+        android:id="@+id/past_item"
+        android:title="@string/past_item"
+        android:icon="@drawable/icon_past"/>
+    <item
+        android:id="@+id/settings_item"
+        android:title="@string/manage_item"
+        android:icon="@drawable/icon_settings"/>
+
+
+</menu>
