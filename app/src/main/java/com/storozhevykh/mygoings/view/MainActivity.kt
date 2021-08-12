@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
@@ -76,5 +77,10 @@ class MainActivity : AppCompatActivity() {
             drawerLayout.closeDrawer(GravityCompat.START);
             return@OnNavigationItemSelectedListener true;
         })
+    }
+
+    fun floatingClick(view: View) {
+        val dialog = AddingGoingDialog()
+        dialog.show(supportFragmentManager, "TAG")
     }
 }

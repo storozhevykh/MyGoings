@@ -23,4 +23,23 @@
     <string name="manageGoings_tab">Manage goings</string>
     <string name="manageNotifications_tab">Manage notifications</string>
 
+    <string name="adding_dialog_title">New going</string>
+    <string name="adding_dialog_name">Name your going</string>
+    <string name="adding_dialog_name_hint">Smth outstanding…</string>
+    <string name="adding_dialog_desc">Write description if needed</string>
+    <string name="adding_dialog_desc_hint">Many words…</string>
+    <string name="adding_dialog_priority">Set priority</string>
+    <string name="adding_dialog_deadline">Set deadline</string>
+    <string name="adding_dialog_deadline_time">No deadline</string>
+
+    <string name="btn_cancel_text">cancel</string>
+    <string name="btn_add_text">add</string>
+
+    <string-array name="deadline_menu">
+        <item>No deadline</item>
+        <item>Today midnight</item>
+        <item>Tomorrow midnight</item>
+        <item>Choose datetime</item>
+    </string-array>
+
 </resources>

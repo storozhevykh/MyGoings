@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AddingGoingDialog"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_add_background_low">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="@string/adding_dialog_title"
+        android:textColor="@color/purple_200"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="@string/adding_dialog_name"
+        style="@style/AddingDialogText"/>
+
+    <EditText
+        style="@style/AddingDialogEditText"
+        android:hint="@string/adding_dialog_name_hint"/>
+
+    <TextView
+        android:text="@string/adding_dialog_desc"
+        style="@style/AddingDialogText"/>
+
+    <EditText
+        style="@style/AddingDialogEditText"
+        android:hint="@string/adding_dialog_desc_hint"
+        android:inputType="textMultiLine"
+        android:lines="3"/>
+
+    <TextView
+        android:text="@string/adding_dialog_priority"
+        style="@style/AddingDialogText"/>
+
+    <RadioGroup
+        android:id="@+id/priororyRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp">
+        <RadioButton
+            android:id="@+id/priority_btn_low"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:button="@null"
+            android:background="@drawable/dialog_radio_gradient_low"/>
+        <RadioButton
+            android:id="@+id/priority_btn_medium"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:layout_marginStart="8dp"
+            android:alpha="0.5"
+            android:background="@drawable/dialog_radio_gradient_medium"/>
+        <RadioButton
+            android:id="@+id/priority_btn_high"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:layout_marginStart="8dp"
+            android:alpha="0.5"
+            android:background="@drawable/dialog_radio_gradient_high"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/AddingDialogText"
+            android:text="@string/adding_dialog_deadline"
+            android:layout_marginEnd="16dp"/>
+        <Spinner
+            android:id="@+id/deadlineSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:entries="@array/deadline_menu"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dialog_deadline"
+        style="@style/DeadlineStyle"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/adding_dialog_deadline_time" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dialog_btn_cancel"
+            style="@style/AddingDialogBtn"
+            android:background="@drawable/dialog_btn_background"
+            android:clickable="true"
+            android:textColor="@color/purple_200"
+            android:text="@string/btn_cancel_text" />
+
+        <TextView
+            android:id="@+id/dialog_btn_add"
+            style="@style/AddingDialogBtn"
+            android:background="@drawable/dialog_btn_background"
+            android:clickable="true"
+            android:textColor="@color/purple_200"
+            android:text="@string/btn_add_text"
+            android:layout_marginStart="40dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

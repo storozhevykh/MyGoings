@@ -1,0 +1,216 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:layout_height="wrap_content">
+            <solid android:color="@android:color/white" />
+        </shape></item>
+    <item><shape><gradient
+            android:type="radial"
+            android:gradientRadius="7%"
+            android:startColor="@color/priorityLow"
+            android:centerX="1"
+            android:centerY="0"
+            android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="7%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.95"
+        android:centerY="0.01"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="7%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.9"
+        android:centerY="0.02"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="7%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.85"
+        android:centerY="0.03"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="7%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.8"
+        android:centerY="0.04"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="7%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.75"
+        android:centerY="0.05"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="7%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.7"
+        android:centerY="0.06"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="10%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.98"
+        android:centerY="0.05"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="10%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.96"
+        android:centerY="0.1"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="9%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.94"
+        android:centerY="0.15"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="9%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.92"
+        android:centerY="0.2"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="8%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.9"
+        android:centerY="0.25"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="8%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.88"
+        android:centerY="0.3"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="7%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.86"
+        android:centerY="0.35"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="5%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.98"
+        android:centerY="0.02"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="5%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.96"
+        android:centerY="0.04"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="5%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.94"
+        android:centerY="0.06"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="5%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.92"
+        android:centerY="0.08"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="4%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.9"
+        android:centerY="0.1"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="4%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.88"
+        android:centerY="0.12"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="3%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.86"
+        android:centerY="0.14"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="3%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.84"
+        android:centerY="0.16"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="3%"
+        android:startColor="@color/priorityLow"
+        android:centerX="0.82"
+        android:centerY="0.18"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+
+
+    <item><shape><gradient
+        android:type="linear"
+        android:startColor="@color/white"
+        android:centerColor="@color/white"
+        android:endColor="@android:color/transparent"
+        android:angle="45"/>
+    </shape></item>
+    <item><shape><gradient
+        android:type="linear"
+        android:startColor="@color/white"
+        android:centerColor="@color/white"
+        android:endColor="@android:color/transparent"
+        android:angle="45"/>
+    </shape></item>
+    <item><shape><gradient
+        android:type="linear"
+        android:startColor="@color/white"
+        android:centerColor="@color/white"
+        android:endColor="@android:color/transparent"
+        android:angle="0"/>
+    </shape></item>
+
+</layer-list>

@@ -10,4 +10,7 @@
     <color name="colorPrimary">#FF03DAC5</color>
     <color name="colorPrimaryDark">#FF018786</color>
     <color name="mainBackground">#E1E1E1</color>
+    <color name="priorityLow">#01A101</color>
+    <color name="priorityMedium">#FFC107</color>
+    <color name="priorityHigh">#CA0101</color>
 </resources>

@@ -7,17 +7,17 @@ import com.storozhevykh.mygoings.model.Going
 interface GoingDao {
 
     @Query("SELECT * FROM Going")
-    fun getAll(): List<Going>
+    suspend fun getAll(): List<Going>
 
     @Query("SELECT * FROM Going WHERE timeElapsed <= :timeLimit")
-    fun getTillTime(timeLimit: Long): List<Going>
+    suspend fun getTillTime(timeLimit: Long): List<Going>
 
     @Insert
-    fun insert(going: Going)
+    suspend fun insert(going: Going)
 
     @Update
-    fun update(going: Going)
+    suspend fun update(going: Going)
 
     @Delete
-    fun delete(going: Going)
+    suspend fun delete(going: Going)
 }
