@@ -21,6 +21,7 @@
         style="@style/AddingDialogText"/>
 
     <EditText
+        android:id="@+id/going_title_edit"
         style="@style/AddingDialogEditText"
         android:hint="@string/adding_dialog_name_hint"/>
 
@@ -29,6 +30,7 @@
         style="@style/AddingDialogText"/>
 
     <EditText
+        android:id="@+id/going_desc_edit"
         style="@style/AddingDialogEditText"
         android:hint="@string/adding_dialog_desc_hint"
         android:inputType="textMultiLine"
@@ -86,11 +88,40 @@
             android:entries="@array/deadline_menu"/>
     </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
     <TextView
         android:id="@+id/dialog_deadline"
         style="@style/DeadlineStyle"
-        android:layout_gravity="center_horizontal"
         android:text="@string/adding_dialog_deadline_time" />
+
+    <TextView
+        android:id="@+id/expired_text"
+        android:layout_below="@id/dialog_deadline"
+        android:text="@string/adding_dialog_expired"
+        style="@style/ExpiredTextStyle"
+        android:textColor="@color/purple_500"
+        android:visibility="gone"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/AddingDialogText"
+            android:text="@string/adding_dialog_category"
+            android:layout_marginEnd="16dp"/>
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:entries="@array/category_menu"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"

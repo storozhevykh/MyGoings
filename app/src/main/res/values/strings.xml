@@ -31,6 +31,8 @@
     <string name="adding_dialog_priority">Set priority</string>
     <string name="adding_dialog_deadline">Set deadline</string>
     <string name="adding_dialog_deadline_time">No deadline</string>
+    <string name="adding_dialog_expired">(expired)</string>
+    <string name="adding_dialog_category">Set category</string>
 
     <string name="btn_cancel_text">cancel</string>
     <string name="btn_add_text">add</string>
@@ -40,6 +42,14 @@
         <item>Today midnight</item>
         <item>Tomorrow midnight</item>
         <item>Choose datetime</item>
+    </string-array>
+
+    <string-array name="category_menu">
+        <item>No category</item>
+        <item>Home</item>
+        <item>Family</item>
+        <item>Work</item>
+        <item>Sport</item>
     </string-array>
 
 </resources>

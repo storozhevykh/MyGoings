@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity() {
         val tabTitles = arrayOf(*tabs)
         val viewPager: ViewPager2 = findViewById(R.id.viewPager)
         viewPager.adapter = ViewPagerAdapter(this, tabTitles.size)
-
         tabLayout = findViewById(R.id.tabLayout)
         TabLayoutMediator(tabLayout, viewPager) { tab, position -> tab.text = tabTitles[position]}.attach()
     }

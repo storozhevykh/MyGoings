@@ -1,8 +1,11 @@
 package com.storozhevykh.mygoings.view
 
+import android.app.DatePickerDialog
+import android.app.TimePickerDialog
+import android.content.Context
 import android.content.DialogInterface
 import android.os.Bundle
-import android.text.format.DateFormat
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +13,7 @@ import android.widget.*
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import com.storozhevykh.mygoings.R
+import com.storozhevykh.mygoings.model.Going
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -33,6 +37,8 @@ class AddingGoingDialog : DialogFragment(), View.OnClickListener {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var titleEdit: EditText
+    private lateinit var descriptionEdit: EditText
     private lateinit var btnCancel: TextView
     private lateinit var btnAdd : TextView
     private lateinit var deadlineTime : TextView
@@ -41,6 +47,11 @@ class AddingGoingDialog : DialogFragment(), View.OnClickListener {
     private lateinit var radioMedium : RadioButton
     private lateinit var radioHigh : RadioButton
     private lateinit var deadlineSpinner : Spinner
+    private lateinit var categorySpinner : Spinner
+    private lateinit var timeListener: TimePickerDialog.OnTimeSetListener
+    private lateinit var dateListener: DatePickerDialog.OnDateSetListener
+    private lateinit var spinnerAdapter: ArrayAdapter<CharSequence>
+    private lateinit var expiredText : TextView
     private var calendar: Calendar = Calendar.getInstance()
     private val sdf: SimpleDateFormat = SimpleDateFormat(DATE_FORMAT)
 
@@ -52,7 +63,6 @@ class AddingGoingDialog : DialogFragment(), View.OnClickListener {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-
     }
 
     override fun onCreateView(
@@ -62,6 +72,8 @@ class AddingGoingDialog : DialogFragment(), View.OnClickListener {
         // Inflate the layout for this fragment
         val fragmentView = inflater.inflate(R.layout.dialog_adding_going, container, false)
 
+        titleEdit = fragmentView.findViewById(R.id.going_title_edit)
+        descriptionEdit = fragmentView.findViewById(R.id.going_desc_edit)
         btnCancel = fragmentView.findViewById(R.id.dialog_btn_cancel)
         btnAdd = fragmentView.findViewById(R.id.dialog_btn_add)
         deadlineTime = fragmentView.findViewById(R.id.dialog_deadline)
@@ -69,9 +81,32 @@ class AddingGoingDialog : DialogFragment(), View.OnClickListener {
         radioLow = fragmentView.findViewById(R.id.priority_btn_low)
         radioMedium = fragmentView.findViewById(R.id.priority_btn_medium)
         radioHigh = fragmentView.findViewById(R.id.priority_btn_high)
+        expiredText = fragmentView.findViewById(R.id.expired_text)
+
         deadlineSpinner = fragmentView.findViewById(R.id.deadlineSpinner)
-        val spinnerAdapter: ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(fragmentView.context, R.array.deadline_menu, R.layout.deadline_spinner_item)
+        spinnerAdapter = ArrayAdapter.createFromResource(fragmentView.context, R.array.deadline_menu, R.layout.deadline_spinner_item)
         deadlineSpinner.adapter = spinnerAdapter
+
+        categorySpinner = fragmentView.findViewById(R.id.categorySpinner)
+        spinnerAdapter = ArrayAdapter.createFromResource(fragmentView.context, R.array.category_menu, R.layout.deadline_spinner_item)
+        categorySpinner.adapter = spinnerAdapter
+
+        timeListener = TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
+            calendar.set(Calendar.HOUR_OF_DAY, hourOfDay)
+            calendar.set(Calendar.MINUTE, minute)
+            calendar.set(Calendar.SECOND, 0)
+            calendar.set(Calendar.MILLISECOND, 0)
+            if (calendar.timeInMillis < Calendar.getInstance().timeInMillis + 1000 * 600)
+                //chooseTime(fragmentView.context)
+                    expiredText.visibility = View.VISIBLE
+            else expiredText.visibility = View.GONE
+            deadlineTime.text = sdf.format(calendar.time)
+        }
+        dateListener = DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+            calendar.set(Calendar.YEAR, year)
+            calendar.set(Calendar.MONTH, month)
+            calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+        }
 
         btnCancel.setOnClickListener(this)
         btnAdd.setOnClickListener(this)
@@ -102,12 +137,7 @@ class AddingGoingDialog : DialogFragment(), View.OnClickListener {
         }
 
         deadlineSpinner.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 when(position) {
                     0 ->
                         deadlineTime.text = "no deadline"
@@ -115,14 +145,15 @@ class AddingGoingDialog : DialogFragment(), View.OnClickListener {
                         calendar = Calendar.getInstance()
                         changeTime(calendar, 1)
                         deadlineTime.text = sdf.format(calendar.time)
-                        //deadlineTime.text = DateFormat.format(DATE_FORMAT,calendar.time)
                     }
                     2 -> {
                         calendar = Calendar.getInstance()
                         changeTime(calendar, 2)
                         deadlineTime.text = sdf.format(calendar.time)
                     }
-                    3 -> deadlineTime.text = "soon"
+                    3 -> {
+                        chooseTime(fragmentView.context)
+                    }
                 }
             }
 
@@ -130,7 +161,27 @@ class AddingGoingDialog : DialogFragment(), View.OnClickListener {
                 deadlineTime.text = "No deadline"
             }
         }
+
+        categorySpinner.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+
+            }
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                deadlineTime.text = "No deadline"
+            }
+        }
+
+        deadlineTime.setOnClickListener { chooseTime(fragmentView.context) }
+
         return fragmentView
+    }
+
+    fun chooseTime(context: Context) {
+        val timeDialog = TimePickerDialog(context, timeListener, 0, 0, true)
+        timeDialog.show()
+        val dateDialog = DatePickerDialog(context, dateListener, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH))
+        dateDialog.show()
+        dateDialog.setOnCancelListener { timeDialog.cancel() }
     }
 
     override fun onCancel(dialog: DialogInterface) {
@@ -142,15 +193,6 @@ class AddingGoingDialog : DialogFragment(), View.OnClickListener {
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AddingGoingDialog.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             AddingGoingDialog().apply {
@@ -177,5 +219,9 @@ class AddingGoingDialog : DialogFragment(), View.OnClickListener {
     }
 
     private fun addGoing() {
+        val going = Going(titleEdit.text.toString(), descriptionEdit.text.toString(),
+            categorySpinner.selectedItem as String, priority, Date().time, calendar.timeInMillis, false)
+        Log.d("mylog", going.toString())
+        dismiss()
     }
 }
