@@ -1,152 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.AddingGoingDialog"
-    android:orientation="vertical"
-    android:background="@drawable/dialog_add_background_low">
+    android:layout_height="match_parent">
 
-    <TextView
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="16dp"
-        android:text="@string/adding_dialog_title"
-        android:textColor="@color/purple_200"
-        android:textSize="24sp" />
+        android:orientation="vertical"
+        tools:context=".view.AddingGoingDialog">
 
-    <TextView
-        android:text="@string/adding_dialog_name"
-        style="@style/AddingDialogText"/>
-
-    <EditText
-        android:id="@+id/going_title_edit"
-        style="@style/AddingDialogEditText"
-        android:hint="@string/adding_dialog_name_hint"/>
-
-    <TextView
-        android:text="@string/adding_dialog_desc"
-        style="@style/AddingDialogText"/>
-
-    <EditText
-        android:id="@+id/going_desc_edit"
-        style="@style/AddingDialogEditText"
-        android:hint="@string/adding_dialog_desc_hint"
-        android:inputType="textMultiLine"
-        android:lines="3"/>
-
-    <TextView
-        android:text="@string/adding_dialog_priority"
-        style="@style/AddingDialogText"/>
-
-    <RadioGroup
-        android:id="@+id/priororyRadioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="24dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp">
-        <RadioButton
-            android:id="@+id/priority_btn_low"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:button="@null"
-            android:background="@drawable/dialog_radio_gradient_low"/>
-        <RadioButton
-            android:id="@+id/priority_btn_medium"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:button="@null"
-            android:layout_marginStart="8dp"
-            android:alpha="0.5"
-            android:background="@drawable/dialog_radio_gradient_medium"/>
-        <RadioButton
-            android:id="@+id/priority_btn_high"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:button="@null"
-            android:layout_marginStart="8dp"
-            android:alpha="0.5"
-            android:background="@drawable/dialog_radio_gradient_high"/>
-    </RadioGroup>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
         <TextView
+            android:id="@+id/adding_going_title"
             style="@style/AddingDialogText"
-            android:text="@string/adding_dialog_deadline"
-            android:layout_marginEnd="16dp"/>
-        <Spinner
-            android:id="@+id/deadlineSpinner"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:entries="@array/deadline_menu"/>
-    </LinearLayout>
+            android:layout_marginEnd="16dp"
+            android:gravity="center_horizontal"
+            android:text="@string/adding_dialog_title"
+            android:textSize="24sp" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
-
-    <TextView
-        android:id="@+id/dialog_deadline"
-        style="@style/DeadlineStyle"
-        android:text="@string/adding_dialog_deadline_time" />
-
-    <TextView
-        android:id="@+id/expired_text"
-        android:layout_below="@id/dialog_deadline"
-        android:text="@string/adding_dialog_expired"
-        style="@style/ExpiredTextStyle"
-        android:textColor="@color/purple_500"
-        android:visibility="gone"/>
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
         <TextView
+            android:id="@+id/titleTV"
             style="@style/AddingDialogText"
-            android:text="@string/adding_dialog_category"
-            android:layout_marginEnd="16dp"/>
-        <Spinner
-            android:id="@+id/categorySpinner"
+            android:text="@string/adding_dialog_name" />
+
+        <EditText
+            android:id="@+id/going_title_edit"
+            style="@style/AddingDialogEditText"
+            android:hint="@string/adding_dialog_name_hint" />
+
+        <TextView
+            android:id="@+id/descTV"
+            style="@style/AddingDialogText"
+            android:text="@string/adding_dialog_desc" />
+
+        <EditText
+            android:id="@+id/going_desc_edit"
+            style="@style/AddingDialogEditText"
+            android:hint="@string/adding_dialog_desc_hint"
+            android:inputType="textMultiLine"
+            android:lines="3" />
+
+        <TextView
+            android:id="@+id/priorityTV"
+            style="@style/AddingDialogText"
+            android:text="@string/adding_dialog_priority" />
+
+        <RadioGroup
+            android:id="@+id/priororyRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/priority_btn_low"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dialog_radio_gradient_low"
+                android:button="@null"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/priority_btn_medium"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:alpha="0.5"
+                android:background="@drawable/dialog_radio_gradient_medium"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/priority_btn_high"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:alpha="0.5"
+                android:background="@drawable/dialog_radio_gradient_high"
+                android:button="@null" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/deadlineTV"
+                style="@style/AddingDialogText"
+                android:layout_marginEnd="16dp"
+                android:text="@string/adding_dialog_deadline" />
+
+            <Spinner
+                android:id="@+id/deadlineSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:entries="@array/deadline_menu" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/dialog_deadline"
+                style="@style/DeadlineStyle"
+                android:text="@string/adding_dialog_deadline_time" />
+
+            <TextView
+                android:id="@+id/expired_text"
+                style="@style/ExpiredTextStyle"
+                android:layout_below="@id/dialog_deadline"
+                android:text="@string/adding_dialog_expired"
+                android:textColor="@color/purple_500"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/categoryTV"
+                style="@style/AddingDialogText"
+                android:layout_marginEnd="16dp"
+                android:text="@string/adding_dialog_category" />
+
+            <Spinner
+                android:id="@+id/categorySpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:entries="@array/category_menu" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:entries="@array/category_menu"/>
-    </LinearLayout>
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal">
+            <TextView
+                android:id="@+id/dialog_btn_cancel"
+                style="@style/AddingDialogBtn"
+                android:background="@drawable/dialog_btn_background"
+                android:clickable="true"
+                android:text="@string/btn_cancel_text"
+                android:textColor="@color/purple_200" />
 
-        <TextView
-            android:id="@+id/dialog_btn_cancel"
-            style="@style/AddingDialogBtn"
-            android:background="@drawable/dialog_btn_background"
-            android:clickable="true"
-            android:textColor="@color/purple_200"
-            android:text="@string/btn_cancel_text" />
+            <TextView
+                android:id="@+id/dialog_btn_add"
+                style="@style/AddingDialogBtn"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/dialog_btn_background"
+                android:clickable="true"
+                android:text="@string/btn_add_text"
+                android:textColor="@color/purple_200" />
 
-        <TextView
-            android:id="@+id/dialog_btn_add"
-            style="@style/AddingDialogBtn"
-            android:background="@drawable/dialog_btn_background"
-            android:clickable="true"
-            android:textColor="@color/purple_200"
-            android:text="@string/btn_add_text"
-            android:layout_marginStart="40dp"/>
+        </LinearLayout>
 
     </LinearLayout>
-
-
-</LinearLayout>
+</ScrollView>

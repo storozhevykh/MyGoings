@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:layout_height="wrap_content">
+            <solid android:color="@android:color/white" />
+        </shape></item>
+
+    <item
+        android:id="@+id/glamourRect">
+    <shape
+        android:shape="rectangle">
+        <solid android:color="@color/mainBackground"/>
+    </shape>
+    </item>
+
+    <item
+        android:left="0dp"
+        android:right="200dp"
+        android:top="0dp"
+        android:bottom="0dp">
+    <shape
+        android:shape="oval">
+        <solid
+            android:color="@color/white"/>
+        <size
+            android:width="100dp"
+            android:height="100dp"/>
+    </shape>
+    </item>
+
+    <item
+        android:left="50dp"
+        android:right="50dp"
+        android:top="0dp"
+        android:bottom="0dp">
+        <shape
+            android:shape="oval">
+            <solid
+                android:color="@color/white"/>
+            <size
+                android:width="100dp"
+                android:height="100dp"/>
+        </shape>
+    </item>
+
+    <item
+        android:left="200dp"
+        android:right="0dp"
+        android:top="0dp"
+        android:bottom="0dp">
+        <shape
+            android:shape="oval">
+            <solid
+                android:color="@color/white"/>
+            <size
+                android:width="100dp"
+                android:height="100dp"/>
+        </shape>
+    </item>
+
+    <item
+        android:left="300dp"
+        android:right="0dp"
+        android:top="0dp"
+        android:bottom="100dp">
+        <shape
+            android:shape="oval">
+            <solid
+                android:color="@color/white"/>
+            <size
+                android:width="30dp"
+                android:height="30dp"/>
+        </shape>
+    </item>
+
+    <item
+        android:left="0dp"
+        android:right="300dp"
+        android:top="100dp"
+        android:bottom="0dp">
+        <shape
+            android:shape="oval">
+            <solid
+                android:color="@color/white"/>
+            <size
+                android:width="30dp"
+                android:height="30dp"/>
+        </shape>
+    </item>
+
+    <item
+        android:left="0dp"
+        android:right="300dp"
+        android:top="0dp"
+        android:bottom="100dp">
+        <shape
+            android:shape="oval">
+            <solid
+                android:color="@color/white"/>
+            <size
+                android:width="30dp"
+                android:height="30dp"/>
+        </shape>
+    </item>
+
+    <item
+        android:left="300dp"
+        android:right="0dp"
+        android:top="100dp"
+        android:bottom="0dp">
+        <shape
+            android:shape="oval">
+            <solid
+                android:color="@color/white"/>
+            <size
+                android:width="30dp"
+                android:height="30dp"/>
+        </shape>
+    </item>
+
+    <!--<item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="30%"
+        android:startColor="@color/white"
+        android:centerX="0.25"
+        android:centerY="0.5"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="30%"
+        android:startColor="@color/white"
+        android:centerX="0.5"
+        android:centerY="0.5"
+        android:endColor="@android:color/transparent" />
+    </shape></item>
+
+    <item><shape><gradient
+        android:type="radial"
+        android:gradientRadius="30%"
+        android:startColor="@color/white"
+        android:centerX="0.75"
+        android:centerY="0.5"
+        android:endColor="@android:color/transparent" />
+    </shape></item>-->
+
+</layer-list>

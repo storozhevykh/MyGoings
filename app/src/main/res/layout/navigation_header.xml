@@ -1,7 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navigationHeader"
     android:layout_width="match_parent"
     android:layout_height="192dp"
-    android:background="@color/purple_700">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?android:colorPrimary"
+    android:orientation="vertical"
+    tools:context=".view.MainActivity">>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/signInBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIGN IN"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="16dp"
+        android:padding="8dp"
+        android:textSize="20sp"
+        android:textColor="?colorOnPrimary"
+        android:clickable="true"
+        android:background="@drawable/sign_btn_background"
+        android:onClick="signHeaderClick"/>
+
+    <TextView
+        android:id="@+id/signInHeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signInBtn"
+        android:text="@string/header_signIn_text"
+        android:textSize="16sp"
+        android:textColor="?colorOnPrimary"
+        android:layout_marginHorizontal="16dp"/>
+
+    <ImageView
+        android:id="@+id/headerImage"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/round_twitter_icon"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/headerUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="16dp"
+        android:text="user"
+        android:layout_toRightOf="@id/headerImage"
+        android:textSize="16sp"
+        android:textColor="?colorOnPrimary"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/signOutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIGN OUT"
+        android:layout_below="@id/headerImage"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:padding="8dp"
+        android:textSize="14sp"
+        android:textColor="?colorOnPrimary"
+        android:clickable="true"
+        android:background="@drawable/sign_btn_background"
+        android:onClick="signHeaderClick"
+        android:visibility="gone"/>
+
+</RelativeLayout>

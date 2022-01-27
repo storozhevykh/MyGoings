@@ -6,10 +6,35 @@
         <item name="cardElevation">10dp</item>
         <item name="cardMaxElevation">14dp</item>
         <item name="contentPaddingBottom">24dp</item>
+        <item name="contentPaddingTop">0dp</item>
+        <item name="contentPaddingLeft">0dp</item>
+        <item name="contentPaddingRight">0dp</item>
+        <item name="cardBackgroundColor">@color/white</item>
+    </style>
+
+    <style name="CardViewStyle_Business" parent="Theme.AppCompat.Light">
+        <item name="cardCornerRadius">2dp</item>
+        <item name="cardElevation">10dp</item>
+        <item name="cardMaxElevation">14dp</item>
+        <item name="contentPaddingBottom">8dp</item>
+        <item name="contentPaddingTop">0dp</item>
+        <item name="contentPaddingLeft">0dp</item>
+        <item name="contentPaddingRight">0dp</item>
+        <item name="cardBackgroundColor">@color/white</item>
+    </style>
+
+    <style name="SettingsCardViewStyle" parent="Theme.AppCompat.Light">
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardElevation">10dp</item>
+        <item name="cardMaxElevation">14dp</item>
+        <item name="contentPaddingBottom">24dp</item>
         <item name="contentPaddingTop">24dp</item>
         <item name="contentPaddingLeft">16dp</item>
         <item name="contentPaddingRight">16dp</item>
         <item name="cardBackgroundColor">@color/white</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
     </style>
 
     <style name="AddingDialogText">
@@ -19,7 +44,8 @@
         <item name="android:layout_marginStart">16dp</item>
         <item name="android:layout_marginEnd">60dp</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/purple_700</item>
     </style>
 
     <style name="AddingDialogEditText">
@@ -43,6 +69,22 @@
         <item name="android:layout_marginTop">20dp</item>
         <item name="android:layout_marginBottom">20dp</item>
         <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="LoginDialogTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="LoginDialogText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textStyle">italic</item>
     </style>
 
@@ -70,6 +112,62 @@
         <item name="android:gravity">center_horizontal</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="GoingTitleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="GoingTitleStyle_Business">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="GoingDescriptionStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+    </style>
+
+    <style name="GoingDoneSkippedStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginLeft">220dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:alpha">0.5</item>
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+
+    <style name="GoingDoneSkippedStyle_Business">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginLeft">220dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:alpha">0.8</item>
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+
+    <style name="popupMenuStyle" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@android:color/holo_purple</item>
+    </style>
+
+    <style name="SettingsTextStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@drawable/edit_text_selector</item>
     </style>
 
 </resources>

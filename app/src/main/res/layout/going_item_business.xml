@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    style="@style/CardViewStyle_Business"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="?android:colorPrimary"
+    android:animateLayoutChanges="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cardView_titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true">
+
+        <ImageView
+            android:id="@+id/priorityHeader"
+            android:layout_width="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="20dp"
+            android:rotation="45"
+            android:src="@drawable/going_card_background_white" />
+
+        <RelativeLayout
+            android:id="@+id/cardTitleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cardTitle"
+                style="@style/GoingTitleStyle_Business"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:maxWidth="250dp"
+                android:text="testtestrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr" />
+
+            <ImageView
+                android:id="@+id/cardEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_toRightOf="@id/cardTitle"
+                android:src="@drawable/icon_edit" />
+
+            <ImageView
+                android:id="@+id/cardExpand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/arrow_drop_down_24" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/cardExpired"
+            style="@style/GoingDescriptionStyle"
+            android:paddingTop="0dp"
+            android:textStyle="bold|italic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/adding_dialog_expired"
+            android:visibility="gone"
+            android:textColor="@color/dialogTextHigh"
+            android:layout_below="@+id/cardTitleLayout"/>
+
+        <TextView
+            android:id="@+id/cardDescription"
+            style="@style/GoingDescriptionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardExpired"
+            android:text=""
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/cardDeadline"
+            style="@style/GoingDescriptionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold|italic"
+            android:layout_below="@+id/cardDescription"
+            android:text="deadline"/>
+
+        <ImageView
+            android:id="@+id/category_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="140dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/cardDescription"
+            android:src="@drawable/icon_work"/>
+
+        <TextView
+            android:id="@+id/cardDoneSkipped"
+            style="@style/GoingDoneSkippedStyle_Business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardDescription"
+            android:visibility="gone"
+            android:text="done"/>
+
+
+        <TextView
+            android:id="@+id/goingMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/cardDescription"
+            android:paddingRight="16dp"
+            android:paddingLeft="8dp"
+            android:text="&#8942;"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:textAppearance="?android:textAppearanceLarge" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.elevenzon.toolbar.MainActivity">
+
+    <item
+        android:id="@+id/spinner_workItem"
+        android:icon="@drawable/icon_work"
+        android:orderInCategory="1"
+        android:title="Work"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/spinner_familyItem"
+        android:icon="@drawable/icon_family"
+        android:orderInCategory="2"
+        android:title="Family"
+        app:showAsAction="ifRoom|collapseActionView"/>
+
+    <item
+        android:id="@+id/spinner_homeItem"
+        android:icon="@drawable/icon_home"
+        android:orderInCategory="3"
+        android:title="Home"
+        app:showAsAction="ifRoom|collapseActionView"/>
+
+    <item
+        android:id="@+id/spinner_sportItem"
+        android:icon="@drawable/icon_sport"
+        android:orderInCategory="4"
+        android:title="Sport"
+        app:showAsAction="ifRoom|collapseActionView"/>
+
+</menu>

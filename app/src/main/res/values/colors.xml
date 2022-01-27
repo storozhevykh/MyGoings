@@ -7,10 +7,27 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="colorPrimary">#FF03DAC5</color>
-    <color name="colorPrimaryDark">#FF018786</color>
+    <color name="white_transparent">#00FFFFFF</color>
     <color name="mainBackground">#E1E1E1</color>
     <color name="priorityLow">#01A101</color>
     <color name="priorityMedium">#FFC107</color>
     <color name="priorityHigh">#CA0101</color>
+    <color name="textColorGold">#EFD33E</color>
+    <color name="textColorGold_spinner">#FFF176</color>
+    <color name="textColorBusiness_spinner">#002F3A</color>
+    <color name="business_primaryVariant">#DEECF1</color>
+    <color name="blackGold_primaryVariant">#5E5E5E</color>
+    <color name="blackGold_tint">#988833</color>
+
+    <color name="dialogTextLow">#004500</color>
+    <color name="dialogTextMedium">#684E00</color>
+    <color name="dialogTextHigh">#770000</color>
+
+    <color name="doneOnBlack">#B5FF62</color>
+    <color name="skippedOnBlack">#FF4949</color>
+
+    <color name="et_enable">#000000</color>
+    <color name="et_disable">#989898</color>
+
+    <color name="clickable_text_color">#1129FF</color>
 </resources>

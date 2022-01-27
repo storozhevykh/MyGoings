@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "702105344294",
+    "firebase_url": "https://mygoings-19c87-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "mygoings-19c87",
+    "storage_bucket": "mygoings-19c87.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702105344294:android:61e8e4ab063306dbeb89e7",
+        "android_client_info": {
+          "package_name": "com.storozhevykh.mygoings"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "702105344294-fupfk5bjc0v5j8b8uc5uv8ib27ugrj5t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.storozhevykh.mygoings",
+            "certificate_hash": "382492da2431857cbcc6c0f2c3ee91bc7ff4ea26"
+          }
+        },
+        {
+          "client_id": "702105344294-kmk4u0ki45acjeb5djunbk9oq2d6nehv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMlbWyWacI5comwa1kBWzeWjh2ujz7E6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "702105344294-kmk4u0ki45acjeb5djunbk9oq2d6nehv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

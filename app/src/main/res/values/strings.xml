@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">MyGoings</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="important_item">Important goings</string>
     <string name="active_item">Active goings</string>
@@ -9,6 +9,9 @@
 
     <string name="toggle_open">Open</string>
     <string name="toggle_close">Close</string>
+
+    <string name="toolbar_category">Category</string>
+    <string name="toolbar_sort">Sort by</string>
 
     <string name="today_tab">Today</string>
     <string name="tomorrow_tab">Tomorrow</string>
@@ -20,8 +23,8 @@
     <string name="skipped_tab">Skipped</string>
     <string name="allPast_tab">All past</string>
 
-    <string name="manageGoings_tab">Manage goings</string>
-    <string name="manageNotifications_tab">Manage notifications</string>
+    <string name="manageGoings_tab">Application</string>
+    <string name="manageNotifications_tab">Notifications</string>
 
     <string name="adding_dialog_title">New going</string>
     <string name="adding_dialog_name">Name your going</string>
@@ -36,6 +39,35 @@
 
     <string name="btn_cancel_text">cancel</string>
     <string name="btn_add_text">add</string>
+    <string name="btn_save_text">save</string>
+    <string name="settings_clearAll">Clear the database</string>
+    <string name="settings_mock">Create mock goings</string>
+    <string name="settings_theme">Choose theme</string>
+    <string name="notifications_on">Enable notifications</string>
+    <string name="notifications_priority">Minimal priority for notifications</string>
+    <string name="notifications_delay">Notify before (in minutes)</string>
+
+    <string name="going_menu_done">DONE</string>
+    <string name="going_menu_skip">SKIP</string>
+    <string name="going_menu_delete">DELETE</string>
+
+    <string name="login_dialog_title">Sign in to synchronize with cloud</string>
+    <string name="login_sign_via">or use account of:</string>
+    <string name="signUp_btn_text">Create new account</string>
+    <string name="header_signIn_text">to synchronize with cloud</string>
+
+    <string name="sync_dialog_text">There are goings in the local database which are not found in the cloud. What do you want to do with them?</string>
+    <string name="sync_dialog_btnMove">Move to cloud</string>
+    <string name="sync_dialog_btnDelete">Delete from local storage</string>
+    <string name="sync_dialog_cancel">Cancel the registration</string>
+
+    <string name="facebook_app_id">232469675720301</string>
+
+    <string-array name="notification_priorities">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
 
     <string-array name="deadline_menu">
         <item>No deadline</item>
@@ -50,6 +82,34 @@
         <item>Family</item>
         <item>Work</item>
         <item>Sport</item>
+    </string-array>
+
+    <string-array name="toolbar_category_menu">
+        <item>All</item>
+        <item>Home</item>
+        <item>Family</item>
+        <item>Work</item>
+        <item>Sport</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="toolbar_sort_menu">
+        <item>Creating</item>
+        <item>Importance</item>
+        <item>Deadline</item>
+    </string-array>
+
+    <string-array name="theme_menu">
+        <item>Positive</item>
+        <item>Business</item>
+        <item>Black Gold</item>
+    </string-array>
+
+    <string-array name="toolbar_titles">
+        <item>Important goings</item>
+        <item>Active goings</item>
+        <item>Past goings</item>
+        <item>Managing</item>
     </string-array>
 
 </resources>

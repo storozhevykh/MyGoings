@@ -16,39 +16,99 @@
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/purple_500"/>
-            
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?android:colorPrimary">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/toolbarTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Important goings"
+                        android:textSize="20sp"
+                        android:textColor="?colorOnPrimary"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/toolbarCategory_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/toolbar_category"
+                            android:textSize="12sp"
+                            android:textColor="?colorOnPrimary"/>
+
+                        <Spinner
+                            android:id="@+id/categorySpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:dropDownWidth="70dp"
+                            app:backgroundTint="?colorOnPrimary"
+                            android:popupBackground="?colorPrimaryVariant" />
+
+                        <TextView
+                            android:id="@+id/toolbarSort_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/toolbar_sort"
+                            android:textSize="12sp"
+                            android:textColor="?colorOnPrimary"/>
+
+                        <Spinner
+                            android:id="@+id/sortSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:dropDownWidth="100dp"
+                            app:backgroundTint="?colorOnPrimary"
+                            android:popupBackground="?colorPrimaryVariant" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/tabs_background"
                 app:tabIndicatorColor="@color/white"
                 app:tabIndicatorHeight="6dp"
-                app:tabSelectedTextColor="@color/white"
-                app:tabTextColor="@color/white"
-                android:background="@color/purple_500"/>
-            
+                app:tabSelectedTextColor="?colorOnPrimary"
+                app:tabTextColor="?colorOnSecondary" />
+
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floating_action_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
-            android:layout_margin="16dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="?colorPrimary"
+            app:borderWidth="2dp"
+            app:backgroundTint="?colorOnPrimary"
+            android:contentDescription="TODO"
             android:onClick="floatingClick"
             app:srcCompat="@drawable/ic_baseline_add_24"
-            android:contentDescription="TODO"
             tools:ignore="RtlHardcoded" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
@@ -58,8 +118,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/menu_navigation"
-        app:headerLayout="@layout/navigation_header"/>
+        app:menu="@menu/menu_navigation" />
 
     <!--
     <androidx.viewpager2.widget.ViewPager2

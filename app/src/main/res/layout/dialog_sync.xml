@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/LoginDialogText"
+            android:id="@+id/sync_text"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:text="@string/sync_dialog_text" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_moveToCloud"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/sign_dialog_btn_background"
+            android:text="@string/sync_dialog_btnMove"
+            android:textColor="?colorOnPrimary" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="16dp"
+            android:background="@drawable/sign_dialog_btn_background"
+            android:text="@string/sync_dialog_btnDelete"
+            android:textColor="?colorOnPrimary" />
+
+        <TextView
+            android:id="@+id/cancel_registration"
+            style="@style/LoginDialogText"
+            android:textColor="@color/clickable_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="8dp"
+            android:clickable="true"
+            android:text="@string/sync_dialog_cancel" />
+
+    </LinearLayout>
+</ScrollView>
